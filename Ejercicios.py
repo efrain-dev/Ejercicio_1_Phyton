@@ -9,7 +9,6 @@ def producto():
 
         print(resultado)
 
-producto()
 def productoraro():
     num1=1
     num2=1
@@ -21,7 +20,6 @@ def productoraro():
         print(num2)
         num1 = num1 * num2
     print(num1)
-productoraro()
 def mayor():
     num1=0
     num2=0
@@ -37,7 +35,7 @@ def mayor():
         num2=num1
 
     print("el numero mayor es"+str(num2))
-mayor()
+
 def sumapar():
     num1=0
     num2=0
@@ -50,9 +48,8 @@ def sumapar():
             num1= num1 + num2
         print(num1)
     print("La suima es"+str(num1))
-sumapar()
 
-def factorial(num):
+def factorial1(num):
 
     factorial = 1
 
@@ -63,9 +60,7 @@ def factorial(num):
     else:
         for i in range(1, num + 1):
             factorial = factorial * i
-        print("El factorial del numero", num, "es", factorial)
-
-factorial(int(input("Ingrese el numero")))
+    return factorial
 
 def sumaprimo():
     num1=0
@@ -84,4 +79,178 @@ def sumaprimo():
 
     print("La suma es"+str(num2))
 
-sumaprimo()
+def ejecicior15():
+    contador = 0
+    a = 0
+    b = 1
+    c = 0
+    N = int(input("INGRESE LA CANTIDAD QUE DESEA VER"))
+
+    while contador < N:
+        a = b
+        b = c
+        c = a + b
+        print(c)
+        contador = contador + 1
+
+def ejercicio16():
+    lista = []
+    mayor = 0
+    menor = 999999
+    cont = 0
+    while  cont==0 :
+        valor = int(input("Digite un numero"))
+        if (valor%2) == 0:
+            lista.append(valor)
+            cont = 0
+        else:
+            cont=1
+
+    lista.append(0)
+    lista2= lista
+    if len(lista)>0 and len(lista2)>0:
+        for x in range(len(lista) - 1):
+            if lista[x] >= mayor:
+                mayor = lista[x]
+        for x in range(len(lista) - 1):
+            if lista[x] <= menor:
+                menor = lista2[x]
+        print("El valor mayor ingresado es: ", mayor)
+        print("El valor menor ingresado es: ", menor)
+
+def ejercicio17():
+    cant = int(input("Cuantas cantidades desea ingresar?"))
+    cont=0
+    total = 0
+    while cont < cant:
+        num1 = float(input("Ingrese un numero: "))
+        cont = cont + 1
+        if num1 % 2 == 0:
+            total = total + num1
+        else:
+            total = total
+    print("La suma de los pares es: ", total)
+
+def ejercicio18():
+    cant = int(input("Cuantas cantidades desea ingresar?"))
+    lista=[]
+    cont=0
+    total = 0
+    while cont < cant:
+        num1 = int(input("Ingrese un numero: "))
+        cont = cont + 1
+        if num1 % 2 == 0:
+            lista.append(num1)
+    if cont <=10:
+        print("La lista de los pares es: ", lista[0:cont])
+    else:
+        print("La lista de los pares es: ", lista[0:10])
+
+def ejercicio19():
+    cant = int(input("Cuantas cantidades desea ingresar?"))
+    lista = []
+    cont = 0
+    cont2=0
+    total = 0
+    while cont < cant:
+        num1 = int(input("Ingrese un numero: "))
+        cont = cont + 1
+        if num1 % 2 == 0:
+            if cont <= 30:
+                cont2 +=1
+                lista.append(num1)
+    lista.append(0)
+    if cont2 <= 30:
+        for x in range(cont2):
+            total += lista[x]
+        print("La suma de los pares es: ", total)
+    else:
+        for x in range(30):
+            total += lista[x]
+        print("La suma de los pares es: ", total)
+
+def ejercicio20():
+    num = int(input("Ingrese un numero: "))
+    x=1
+    factorial=1
+    while x <= num:
+        print(x)
+        factorial = factorial*(x)
+        x +=1
+    print("El factorial de", num, "es:",factorial)
+
+def ejercicio21():
+    num = float(input("Ingrese un numero: "))
+    x=1
+    cont=0
+    for x in range (1,int(num)+1):
+        if (num % x ) == 0:
+            cont += 1
+    if cont == 2:
+        print("El valor", num, "es primo")
+    else:
+        print("El valor", num, "no es primo")
+
+def ejercicio22():
+    lista= []
+    total=0
+    x=1
+    for x in range(1,31):
+        valor=float(input("Digite un numero"))
+        lista.append(valor)
+    lista.append(0)
+    for x in range(1,31):
+        cont=0
+        for y in range(1, int(lista[x]) + 1):
+            if (lista[x] % y) == 0:
+                cont += 1
+        if cont == 2:
+            total= total+lista[x]
+    print("La suma de los numeros primos es: ", total)
+
+def ejercicio23():
+    lista= []
+    factlista=[]
+    factorial=1
+    total=0
+    x=0
+    y=1
+    for x in range(1,6):
+        valor=float(input("Digite un numero"))
+        lista.append(valor)
+    lista.append(0)
+    for x in range(5):
+        while y <= lista[x]:
+            factorial = factorial*(y)
+            y +=1
+        factlista.append(factorial)
+    for x in range(len(factlista)):
+        total += factlista[x]
+    print(total)
+
+def factorial(num):
+    factorial = 1
+    if num < 0:
+        print("Lo siento el factorial no existe porque es un numero negatico")
+    elif num == 0:
+        print("El fatorial de 0 es 1")
+    else:
+        for i in range(1, num + 1):
+            factorial = factorial * i
+    return factorial
+
+def ejercicio24():
+    num1 = int(input("Entre mas grande el numero mas preciso es el valor de euler"))
+    euler=1
+    for i in range(1, num1):
+            euler = euler+ 1/factorial(i)
+
+    print("Numero de euler es"+str(euler))
+
+def ejerccico25():
+    numero = int(input("Ingrese el numero"))
+    i= int(input("Ingrese I"))
+    resultado = factorial(numero)/(factorial(i)*factorial(numero-i))
+    print("EL resultado es " +str(resultado))
+ejercicio24()
+ejerccico25()
