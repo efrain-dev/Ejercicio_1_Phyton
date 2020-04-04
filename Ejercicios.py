@@ -79,6 +79,20 @@ def sumaprimo():
 
     print("La suma es"+str(num2))
 
+def fibonacci():
+        contador = 0
+        a = 0
+        b = 1
+        c = 0
+        N = int(input("INGRESE LA CANTIDAD QUE DESEA VER"))
+
+        while contador < N:
+            a = b
+            b = c
+            c = a + b
+            print(c)
+            contador = contador + 1
+
 def ejecicior15():
     contador = 0
     a = 0
