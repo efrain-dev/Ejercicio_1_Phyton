@@ -1,5 +1,69 @@
+def ejercicio1():
+    numeroUno = int(input("Introduce el numero"))
+    print("El numero es uno "+str(numeroUno))
 
-def producto():
+
+def ejercicio2():
+
+    numeroUno= int(input("Introduce el primer numero"))
+    numeroDos= int(input("Introduce el segundo numero"))
+    resultado=numeroDos*numeroUno
+
+    print("El numero es"+str(resultado))
+
+def ejercicio3():
+    num1=0
+    num2=0
+    resultado=0
+    num1 = int(input("Ingrese un numero"))
+    num2 = int(input("Ingrese un numero"))
+    if num2 >= num1:
+     resultado=num1
+    else:
+     resultado=num2
+     print("el numero mayor es"+str(num2))
+
+def ejercicio4():
+
+    num1 = float(input("Ingrese un numero"))
+    num2 = float(input("Ingrese el numero 2 "))
+    num3 = float(input("Ingrese el numero 3 "))
+    if num1 > num2:
+        if num1 > num3:
+            if num2 > num3:
+                print("El valor mayor es: ", num1)
+    elif num2 > num1:
+        if num2 > num3:
+            if num1 > num3:
+                print("El valor mayor es: ", num2)
+
+    elif num3 > num2:
+        if num3 > num1:
+            if num2 > num1:
+                print("El valor mayor es: ", num3)
+
+def ejercicio6():
+    resultadoSuma=0
+    resultadoProducto=1
+    for x in range(0, 50):
+        num1 = int(input("El numero"))
+        resultadoSuma=resultadoSuma+num1
+        resultadoProducto=resultadoProducto*num1
+
+    print("La suma es ", str(resultadoSuma))
+    print("El producto es ", str(resultadoProducto))
+
+def ejercicio7():
+    num1 = 0
+    resultado =0
+    while not num1 < 0 :
+        resultado = resultado+num1
+        num1 = int(input("Ingrese un numero x"))
+
+
+    print("La suma total es" + str(resultado))
+
+def ejercicio8():
 
     numeroUno= int(input("Introduce el primer numero"))
     numeroDos= int(input("Introduce el segundo numero"))
@@ -9,7 +73,7 @@ def producto():
 
         print(resultado)
 
-def productoraro():
+def ejercicio10():
     num1=1
     num2=1
     i = ord('d')
@@ -20,9 +84,9 @@ def productoraro():
         print(num2)
         num1 = num1 * num2
     print(num1)
-def mayor():
+
+def ejercicio11():
     num1=0
-    num2=0
     i = ord('d')
     while not i == 102:
 
@@ -35,6 +99,20 @@ def mayor():
         num2=num1
 
     print("el numero mayor es"+str(num2))
+
+def ejercicio15():
+        contador = 0
+        a = 0
+        b = 1
+        c = 0
+        N = int(input("INGRESE LA CANTIDAD QUE DESEA VER"))
+
+        while contador < N:
+            a = b
+            b = c
+            c = a + b
+            print(c)
+            contador = contador + 1
 
 def sumapar():
     num1=0
@@ -79,19 +157,7 @@ def sumaprimo():
 
     print("La suma es"+str(num2))
 
-def fibonacci():
-        contador = 0
-        a = 0
-        b = 1
-        c = 0
-        N = int(input("INGRESE LA CANTIDAD QUE DESEA VER"))
 
-        while contador < N:
-            a = b
-            b = c
-            c = a + b
-            print(c)
-            contador = contador + 1
 
 def ejecicior15():
     contador = 0
